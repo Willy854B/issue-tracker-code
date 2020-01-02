@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="row d-flex justify-content-between">
+    <h3>TICKETS:</h3>
+</div>
+<!-- Ticket List -->
+<div class="row list-group">
+    {% for ticket in tickets %}
+    <a href="{% url 'ticket' ticket.id %}" class="list-group-item list-group-item-action flex-column align-items-start" id="{{ ticket.id }}">
+        <div class="row d-flex w-100 justify-content-between">
+            <div class="rolly">
+                <h4 class="text-capitalize">{{ ticket.title }}</h4>
+    
+                {% if 'high' in ticket.priority %}
+            <span class="badge badge-pill badge-danger">{{ ticket.priority }}</span>
+                {% if 'bug' in ticket.ticket_type %}
+            <span class="badge badge-pill badge-danger">{{ ticket.ticket_type }}</span>
+                {% else %}
+            <span class="badge badge-pill badge-danger">solved</span>
+                {% endif %}
+    
+            {% elif 'medium' in ticket.priority %}
+            <span class="badge badge-pill badge-info ml-auto align-self-start">{{ ticket.priority }}</span>
+                {% if 'bug' in ticket.ticket_type %}
+            <span class="badge badge-pill badge-info">{{ ticket.ticket_type }}</span>
+                {% else %}
+            <span class="badge badge-pill badge-info">solved</span>
+                {% endif %}
+    
+            {% elif 'low' in ticket.priority %}
+            <span class="badge badge-pill badge-success ml-auto align-self-start">{{ ticket.priority }}</span>
+                {% if 'bug' in ticket.ticket_type %}
+            <span class="badge badge-pill badge-success">{{ ticket.ticket_type }}</span>
+                {% else %}
+            <span class="badge badge-pill badge-success">solved</span>
+                {% endif %}
+    
+            {% endif %}
+            </div>
+            {% if ticket.comments.count >= 1 %}
+            <div class="ball">
+                <span class="badge badge-primary badge-pill">{{ ticket.comments.count }}</span>
+                <small>Comments</small>
+            </div>
+            {% endif %}
+        </div>
+        <div class="row">
+            <p class="ticket-description text-truncate p-2">{{ ticket.description }}</p>
+        </div>
+        <div class="row d-flex w-100 justify-content-between">
+            <p>Author: {{ ticket.created_by }}</p>
+            <p>Date Added: {{ ticket.date_added }}</p>
+        </div>
+        <div class="row">
+        </div>
+    </a>
+    {% endfor %}
+<!-- End of Ticket List -->
+</div>
+
+{% endblock %}
