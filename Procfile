@@ -1,0 +1,1 @@
+web: gunicorn itracker.wsgi:application
