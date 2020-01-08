@@ -60,32 +60,6 @@ def add_feature(request):
             'ticket_type': ticket_type
     }
     
-    # if request.GET & TicketForm.base_fields.keys():
-    #     form = TicketForm(request.GET)
-    # else:
-    #     form = TicketForm(info, request.POST or None)
-
-    # if request.method == 'POST':
-    #     # if form is valid - create ticket
-    #     if form.is_valid():
-    #         form = form.save(commit=False)
-    #         form.date_added = timezone.now()
-    #         form.created_by = request.user.username
-    #         form.save()
-    #         # Clear session data
-    #         request.session['title'] = ''
-    #         request.session['description'] = ''
-    #         request.session['priority'] = ''
-    #         request.session['ticket_type'] = ''
-    
-    #         messages.success(request, "You have successfully created and paid for a new feature Ticket.")
-    #         return redirect(reverse('index'))
-    #     else:
-    #         messages.success(request, "Sorry, something went wrong. Please try again later.")
-    #         return redirect(reverse('index'))
-
-    # return render(request, 'add_feature.html', {'form': form})
-    
     if request.GET & TicketForm.base_fields.keys():
                 form = TicketForm(request.GET)
     else:

@@ -12,7 +12,7 @@ class TicketForm(ModelForm):
             'ticket_type': _('Ticket Type'),
         }
         help_texts = {
-            'ticket_type': _('Please note: Feature request will cost €30')
+            'ticket_type': _('Feature request will cost $30.')
         }
 
 
