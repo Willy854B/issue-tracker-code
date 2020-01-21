@@ -67,7 +67,7 @@ https://docs.google.com/presentation/d/e/2PACX-1vSjmwlBeb4ShUFwHj3YxPiN4gaZLx_An
 
 - **[Font Awesome](https://fontawesome.com)** 
 
-   	I used **Font Awesome** to add icons and style fonts. The <i> and <span> elements were used to insert the scripts required to render these icons and give this project a simple yet elegant look throughout the site.
+   	I used **Font Awesome** to add icons and style fonts. The **i** and **span** elements were used to insert the scripts required to render these icons and give this project a simple yet elegant look throughout the site.
 
 - **[PostgreSQL](https://www.postgresql.org)**
 
@@ -78,7 +78,7 @@ The following tests have been executed to make sure this project functions as ex
 
 1. Different browsers such as Opera, internet explorer, Firefox, and Google were used to render this site on the computer. I modified the screen display to different sizes making sure that page layout, specially the menu bar, adapts to any device the user may be operating. 
 
-2. To test the code locally on my computer, I logged into ```AWS Console```, opened ```Cloud9```, activated the environment I was working on, and made sure ```python3 manage.py runserver $IP:$C9_PORT``` was running. This allowed me to make any adjustments to the code, and get the data back from the database.
+2. To test the code locally on my computer, I logged into **AWS Console**, opened **Cloud9**, activated the environment I was working on, and made sure ```python3 manage.py runserver $IP:$C9_PORT``` was running. This allowed me to make any adjustments to the code, and get the data back from the database.
 	
 3. Links were tested by clicking on each one of them, and making sure each button is coded properly and takes us to the right place.
 
@@ -90,9 +90,9 @@ The following tests have been executed to make sure this project functions as ex
 
 5. I used Chrome's inspect tool to open the console and check for any errors in the code. It also allowed me to open the Network tab and check for important local or external links needed to run the application.   
 
-6. I used ```Django's Admin Panel``` to verify that the tables were properly created and that the information entered in some of the forms available in different pages was actually being stored in the database.
+6. I used **Django's Admin Panel** to verify that the tables were properly created and that the information entered in some of the forms available in different pages was actually being stored in the database.
 
-7. To test the final product, I logged in to Heroku, selected ```issue-tracker-application```, and clicked on "Open app". This allowed me to see if all aspects of this project were working as planned.
+7. To test the final product, I logged in to Heroku, selected **issue-tracker-application**, and clicked on "Open app". This allowed me to see if all aspects of this project were working as planned.
 ## Contributing
 ### Getting the code up and running
 clone this repository into the editor you normally use by typing ```git clone https://github.com/Willy854B/issue-tracker-code``` command in your terminal. To cut ties with this Github repository, type ```git remote rm origin``` in the terminal.
@@ -123,7 +123,7 @@ Now just run the heroku open command and the website will open in the browser.
 
 ## Credits
 ### Content
-- Although most of the code in this website was created by me, I took some ideas from Bruno Bord who also accredited Paul Bissex for his work. The content this app is intended to be the third part of a series of three projects.
+- Although most of the code in this website was created by me, I took some ideas from Bruno Bord who also credited Paul Bissex for his work. The content this app is intended to be the third part of a series of three projects.
 
 ### Media
 - The home page logo was found using images tab in [Google Search](https://developers.google.com/search/).
