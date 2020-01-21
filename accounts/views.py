@@ -34,7 +34,6 @@ def login(request):
         login_form = UserLoginForm()
     return render(request, 'login.html', {'login_form': login_form})
 
-@login_required
 def registration(request):
     """Render the registration page"""
     if request.user.is_authenticated:
@@ -58,7 +57,7 @@ def registration(request):
     return render(request, 'registration.html', {
         "registration_form": registration_form})
 
-
+@login_required
 def user_profile(request):
     """The user's profile page"""
     user = User.objects.get(email=request.user.email)

@@ -31,9 +31,9 @@
                 <ul class="nav navbar-nav navbar-right">
                         <li><a href="{% url 'tickets' %}"><i class="fas fa-ticket-alt"></i> Tickects</a></li>
                     {% if user.is_authenticated %}
-                        <li><a href="{% url 'add_ticket' %}">Add Tickect</a></li>
+                        <li><a href="{% url 'add_ticket' %}"><i class="fas fa-plus"></i> Add Ticket</a></li>
                         <li><a href="{% url 'profile' %}"><i class="fas fa-user"></i> Profile</a></li>
-                        <li><a href="{% url 'logout' %}"><i class="fas fa-sign-out"></i> Log Out</a></li>
+                        <li><a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i> Log Out</a></li>
                     {%  else %}
                         <li><a href="{% url 'registration' %}"><i class="fas fa-user-plus"></i> Register</a></li>
                         <li><a href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i> Log In</a></li>
@@ -53,22 +53,32 @@
     {% endif %}
     
     <div class="container">
-        {% if user.is_authenticated %} 
-        <div class="display">
-            <form action="{% url 'search' %}" method="get">
-                <input type="text" name="q">
-                <button type="search">Search</button>
-            </form>
+        <div class='row'>
+            {% if user.is_authenticated %}
+            <div col-sm-12 col-md-12'>
+                <div id="searchBr" class="display">
+                    <form action="{% url 'search' %}" method="get">
+                        <input type="text" name="q">
+                        <button type="search">Search</button>
+                    </form>
+                </div>
+            </div>
+            {% endif %}
+            <div class='row'>
+                <div class="main col-sm-12 col-md-12">
+                    {% block content %} 
+                    {% endblock %}
+                </div>
+            </div>    
         </div>
-        {% endif %}
-        
-        {% block content %} 
-        {% endblock %}
     </div>
 
     <footer>
+            <a href="https://www.facebook.com"><i class="fab fa-facebook fa-4x"></i></a>
+            <a href="https://twitter.com/"><i class="fab fa-twitter fa-4x"></i></a>
+            <a href="https://instagram.com/"><i class="fab fa-instagram fa-4x"></i></a>
         <div class="container">
-            <p>Made by William G.</p>
+            <p class="hp-b">Made by William G.</p>
         </div>
     </footer>
 </body>

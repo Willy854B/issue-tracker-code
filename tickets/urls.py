@@ -7,5 +7,5 @@ urlpatterns = [
     url(r'^(?P<ticket_id>\d+)/$', single_ticket, name='ticket'),
     url(r'^add_ticket/$', add_ticket, name='add_ticket'),
     url(r'^add_feature/$', add_feature, name='add_feature'),
-    url(r'^(?P<ticket_id>\d+)/comment/$', add_comment, name='add_comment'),
+    url(r'^(?P<ticket_id>\d+)/comments/$', add_comment, name='add_comment'),
 ]

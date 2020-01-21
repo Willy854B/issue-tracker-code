@@ -6,4 +6,4 @@ from tickets.models import Ticket
 
 def do_search(request):
     tickets = Ticket.objects.filter(Q(title__icontains=request.GET['q']) | Q(created_by__icontains=request.GET['q']) | Q(priority__icontains=request.GET['q']) | Q(ticket_type__icontains=request.GET['q']) | Q(description__icontains=request.GET['q']))
-    return render(request, 'tickets.html', {"tickets": tickets})
+    return render(request, 'all_tickets.html', {"tickets": tickets})

@@ -100,4 +100,4 @@ def add_comment(request, ticket_id):
             return redirect('ticket', ticket_id=ticket.id)
     else:
         form = CommentForm()
-    return render(request, 'add_comment.html', {'form': form})
+    return render(request, 'comments/add_comment.html', {'form': form})

@@ -21,20 +21,22 @@ def checkout(request):
             order = order_form.save(commit=False)
             order.date = timezone.now()
             order.save()
-        
-            ticket = get_object_or_404(Ticket, pk=id)
-        
+            
+            ticket =request.session.get('Ticket') 
+            total=30
+            price=30
+            
             order_line_item = OrderLineItem(
                 order=order,
                 ticket=ticket,
-                price=30,
+                price=price
             )
             order_line_item.save()
                     
             try:
                 customer = stripe.Charge.create(
-                    amount=int(3000),
-                    currency="USD",
+                    amount=int(total*100),
+                    currency="usd",
                     description=request.user.email,
                     card=payment_form.cleaned_data['stripe_id']
                 )
