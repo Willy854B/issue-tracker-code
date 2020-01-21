@@ -113,7 +113,7 @@ To run the code on your computer, you need to:
 
 7. Create a **Procfile** under the issue-tracker-code project folder and add ```web: gunicorn itracker.wsgi:application```.
 
-8. Make any other adjustments , lower the limit of results to 200000, and run the following commands in the terminal:
+8. Make any other necessary adjustments in yor code and run the following commands in the terminal:
 ```
 git add <directories/files_to_be_added>
 git commit -m "Message"

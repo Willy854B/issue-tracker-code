@@ -56,6 +56,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'itracker.urls'
@@ -179,8 +180,8 @@ MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
 
 # STATIC_URL = '/static/'
 # STATICFILES_DIRS = (
-#     os.path.join(BASE_DIR, "static"),
-# )
+#     os.path.join(BASE_DIR, "static"),)
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # MEDIA_URL = '/media/'
