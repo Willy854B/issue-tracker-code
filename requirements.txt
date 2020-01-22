@@ -46,7 +46,6 @@ pyasn1==0.4.8
 pyasn1-modules==0.2.1
 pycrypto==2.6.1
 Pygments==2.2.0
-pygobject==3.26.1
 PyJWT==1.5.3
 pylint==1.8.1
 pylint-django==0.8.0
@@ -54,7 +53,6 @@ pylint-flask==0.5
 pylint-plugin-utils==0.6
 pyOpenSSL==17.5.0
 pyserial==3.4
-python-apt==1.6.4
 python-dateutil==2.8.0
 python-debian==0.1.32
 pytz==2019.3
@@ -69,13 +67,9 @@ SecretStorage==2.3.1
 service-identity==16.0.0
 setuptools-44.0.0
 six==1.13.0
-ssh-import-id==5.7
 stevedore==1.31.0
 stripe==2.41.0
-systemd-python==234
 Twisted==17.9.0
-ufw==0.36
-unattended-upgrades==0.1
 urllib3==1.25.7
 virtualenv==16.2.0
 virtualenv-clone==0.5.3
