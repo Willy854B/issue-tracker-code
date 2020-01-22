@@ -70,6 +70,7 @@ rsa==3.4.2
 s3transfer==0.2.1
 SecretStorage==2.3.1
 service-identity==16.0.0
+setuptools-44.0.0
 six==1.13.0
 ssh-import-id==5.7
 stevedore==1.31.0
