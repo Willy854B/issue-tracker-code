@@ -103,7 +103,7 @@ To run the code on your computer, you need to:
 
 2. Create a Heroku repository with a Postgres database within the new environment. Open the settings page and make sure that all the necessary configuration variables are properly typed so that Heroku can connect to Cloud9 and Stripe.
 
-3. Open your workspace/environtment within Cloud9, and select the ```settings.py``` file. In there, you need to make sure that all AWS, Stripe, and Django secret keys have the right key-value pairs in the code.
+3. Open your workspace/environtment within Cloud9, and select the **settings.py** file. In there, you need to make sure that all AWS, Stripe, and Django secret keys have the right key-value pairs in the code.
 
 4. Create a new Stripe account and install it by typing ```sudo pip3 install stripe``` in Cloud9's terminal window. 
 
@@ -113,7 +113,7 @@ To run the code on your computer, you need to:
 
 7. Create a **Procfile** under the issue-tracker-code project folder and add ```web: gunicorn itracker.wsgi:application```.
 
-8. Make any other necessary adjustments in yor code and run the following commands in the terminal:
+8. Make any other necessary adjustments in your code and run the following commands in the terminal:
 ```
 git add <directories/files_to_be_added>
 git commit -m "Message"
