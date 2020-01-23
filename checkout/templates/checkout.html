@@ -14,26 +14,29 @@
 
 {% block content %}
 
-<div class="d-flex flex-column justify-content-center">
-    <h3>Please Fillout The Forms below</h3>
-    <h3>Make Sure All Fields Are Provided Correctly</h3>
-    <h3>Once you press the "Submit Payment" button, $30 will be charged to your credit card</h3>
-</div>
 <div class='container'>
     <div class='row'>
-        <div id="check-forms" class="col-sm-12 col-md-12">
+        <div class="col-sm-12 col-md-12">
+            <h3>Please Fillout The Forms below</h3>
+            <h3>Make Sure All Fields Are Provided Correctly</h3>
+            <h3>Once you press the "Submit Payment" button, $30 will be charged to your credit card</h3>
+        </div>
+    </div>
+
+    <div class='row'>
+        <div class="col-sm-12 col-md-12">
             <form role="form" method="post" id="payment-form" action="{% url 'checkout' %}">
                 <legend>Payment Details</legend>
             
-                <div id="credit-card-errors" style="display: none;">
+                <div id="credit-card-errors" style="display: none">
                     <div id="alert-message block-message error" id="stripe-error-message"></div>
                 </div>
             
-                <div class="form-group col-sm-6 col-md-6">
+                <div class="form-group col-sm-12 col-md-6">
                     {{ order_form | as_bootstrap }}
                 </div>
             
-                <div class="form-group col-sm-6 col-md-6">
+                <div class="form-group col-sm-12 col-md-6">
                     {{ payment_form | as_bootstrap }}
                 </div>
             
@@ -45,4 +48,5 @@
         </div>
     </div>
 </div>
+
 {% endblock %}
