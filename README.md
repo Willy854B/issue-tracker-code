@@ -123,7 +123,7 @@ Now just run the heroku open command and the website will open in the browser.
 
 ## Credits
 ### Content
-- Although most of the code in this website was created by me, I took some ideas from Bruno Bord who also credited Paul Bissex for his work. The content this app is intended to be the third part of a series of three projects.
+- Although most of the code in this website was created by me, I took some new ideas from Bruno Bord who also credited Paul Bissex for his work, which can be found by clicking on this [link](https://readthedocs.org/projects/django-mini-issue-tracker/). Despite the fact that it is a small Django application, it helped me to understand the model structure to create the tables and the information I needed to obtain from the user. Obviously the structure of the models were changed to meet the requirements specified for this assignment. This app is intended to be the third part of a series of three projects.
 
 ### Media
 - The home page logo was found using images tab in [Google Search](https://developers.google.com/search/).

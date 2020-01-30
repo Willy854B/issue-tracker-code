@@ -1,0 +1,82 @@
+/*form {*/
+/*    width: 50%;*/
+/*}*/
+
+body {
+    font-family: Arial;
+    padding-top: 100px;
+}
+
+footer {
+    margin-top: 40px;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    border-top: 1px solid #ededed;
+    color: #A9A9A9;
+    text-align: center;
+    height: 210px;
+}
+
+.icon-bar {
+    background-color: #fff;
+}
+
+.accountform {
+    padding-top: 20px;
+}
+
+caption p {
+    word-wrap: break-word;
+}
+
+.row.row-flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+#searchBr {
+    width: 255px;
+	margin:auto;
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+
+.mid {
+    width: 420px;
+	margin:auto;
+}
+
+.main {
+padding-left: 10%;
+padding-right: 10%;
+}
+
+.hp-a {
+    text-align: center;
+    font-size: 2em;
+    padding-bottom: 2em;
+}
+
+.hp-b{
+    padding-top: 2em;
+    font-size: 1.4em;
+}
+
+#A_tickets {
+    padding-left: 2.2em;
+    padding-top: 1.6em;
+    padding-bottom: 1.6em;
+}
+
+#boxes {
+    margin-top: 2em;
+}
+
+#space {
+    padding-left: 1.8em;
+    font-size: 16.8px;
+}
+
+
+

@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .forms import MakePaymentForm, OrderForm
+from tickets.forms import TicketForm
 from .models import OrderLineItem
 from django.conf import settings
 from django.utils import timezone
@@ -16,22 +17,14 @@ def checkout(request):
     if request.method == "POST":
         order_form = OrderForm(request.POST)
         payment_form = MakePaymentForm(request.POST)
+        form=TicketForm(request.POST)
 
         if order_form.is_valid() and payment_form.is_valid():
             order = order_form.save(commit=False)
             order.date = timezone.now()
             order.save()
             
-            ticket =request.session.get('Ticket') 
-            total=30
-            price=30
-            
-            order_line_item = OrderLineItem(
-                order=order,
-                ticket=ticket,
-                price=price
-            )
-            order_line_item.save()
+            total = 30
                     
             try:
                 customer = stripe.Charge.create(

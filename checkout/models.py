@@ -20,7 +20,7 @@ class Order(models.Model):
 class OrderLineItem(models.Model):
     order = models.ForeignKey(Order, null=False)
     ticket = models.ForeignKey(Ticket, null=False)
-    price = models.DecimalField(max_digits=6, decimal_places=2, null=False)
+    price = models.DecimalField(max_digits=6, decimal_places=2, default='30')
 
     def __str__(self):
         return "{0} {1} @ {2}".format(
